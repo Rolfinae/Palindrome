@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DalPalindrome;
 
@@ -16,9 +17,12 @@ namespace BllPalindrome
             List<string> lineClean = new List<string>();
             foreach (string line in readLines)
             {
+                string text = line;
+                text = Regex.Replace(text, @"\(.*\)", "");
+                text = Regex.Replace(text, @"\s", " ");
                 string[] monTableau;
-                line.Trim();
-                monTableau = line.Split(',','(');
+                text.Trim();
+                monTableau = text.Split(',');
                 lineClean.Add(monTableau[0].Trim());
             }
             return lineClean;
