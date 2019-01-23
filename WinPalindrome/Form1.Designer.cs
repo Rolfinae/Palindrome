@@ -33,6 +33,7 @@
             this.LstPalindrome = new System.Windows.Forms.ListBox();
             this.LstNotPalindrome = new System.Windows.Forms.ListBox();
             this.BtnFilter = new System.Windows.Forms.Button();
+            this.Reverse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnReadFile
@@ -79,11 +80,22 @@
             this.BtnFilter.UseVisualStyleBackColor = true;
             this.BtnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
+            // Reverse
+            // 
+            this.Reverse.Location = new System.Drawing.Point(261, 343);
+            this.Reverse.Name = "Reverse";
+            this.Reverse.Size = new System.Drawing.Size(71, 63);
+            this.Reverse.TabIndex = 5;
+            this.Reverse.Text = "Liste Inverser";
+            this.Reverse.UseVisualStyleBackColor = true;
+            this.Reverse.Click += new System.EventHandler(this.Reverse_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 450);
+            this.Controls.Add(this.Reverse);
             this.Controls.Add(this.BtnFilter);
             this.Controls.Add(this.LstNotPalindrome);
             this.Controls.Add(this.LstPalindrome);
@@ -102,6 +114,7 @@
         private System.Windows.Forms.ListBox LstPalindrome;
         private System.Windows.Forms.ListBox LstNotPalindrome;
         private System.Windows.Forms.Button BtnFilter;
+        private System.Windows.Forms.Button Reverse;
     }
 }
 

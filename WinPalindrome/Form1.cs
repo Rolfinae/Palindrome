@@ -50,5 +50,25 @@ namespace WinPalindrome
                 }
             }
         }
+
+        private void Reverse_Click(object sender, EventArgs e)
+        {
+            LstNotPalindrome.Items.Clear();
+            LstPalindrome.Items.Clear();
+            Palindrome myPalindrome = new Palindrome();
+            foreach (string word in LstAll.Items)
+            {
+                bool result = myPalindrome.IsPalindrome(word);
+                if (result)
+                {
+                    LstNotPalindrome.Items.Add(word);
+                }
+                else
+                {
+
+                    LstPalindrome.Items.Add(word);
+                }
+            }
+        }
     }
 }
